@@ -1,0 +1,34 @@
+.outerContainer{
+display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f8ff;
+  width: 800px;
+  height: 400px;
+}
+.lat, 
+.long,
+.submit-button{
+  margin-bottom:50px;
+}
+.lat, 
+.long{
+  font-size:50px;
+}
+
+.submit-button{
+  width:10em;
+  height:auto;
+  font-size: 30px;
+}
+
+

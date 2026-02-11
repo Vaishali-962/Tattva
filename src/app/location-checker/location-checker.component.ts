@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './location-checker.component.css'
 })
 export class LocationCheckerComponent {
+  long : number = 0;
+  lat : number = 0;
 
+  detectLocation(){
+    console.log("Button is clicked!");
+  }
 }
