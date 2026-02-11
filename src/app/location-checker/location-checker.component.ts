@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-location-checker',
@@ -14,5 +15,16 @@ export class LocationCheckerComponent {
   detectLocation(){
     this.isDetectLocationMethodCalled = true;
     console.log("Button is clicked!");
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        this.long = pos.coords.longitude;
+        this.lat = pos.coords.latitude;
+        console.log(this.long);
+        console.log(this.lat);
+      },
+      (err) => {console.log("Error :: " + err.message)},
+      {enableHighAccuracy : true, timeout : 5000}
+    )
   }
 }
