@@ -10,8 +10,9 @@ import { Component } from '@angular/core';
 export class LocationCheckerComponent {
   long : number = 0;
   lat : number = 0;
-
+  isDetectLocationMethodCalled :boolean = false;
   detectLocation(){
+    this.isDetectLocationMethodCalled = true;
     console.log("Button is clicked!");
   }
 }

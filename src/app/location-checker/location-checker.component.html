@@ -2,8 +2,8 @@
 <div class="outerContainer">
 <div class="container">
   <div class="display">
-    <p class="long"><strong>{{long}}</strong></p>
-    <p class="lat"><strong>{{lat}}</strong></p>
+    @if(isDetectLocationMethodCalled){<p class="long"><strong>{{long}}</strong></p>}
+    @if(isDetectLocationMethodCalled){<p class="long"><strong>{{long}}</strong></p>}
   </div>
   <button type="submit" class="submit-button" (click)="detectLocation()">Find my Location</button>
 </div>
